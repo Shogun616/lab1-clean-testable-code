@@ -21,4 +21,13 @@ public class CellTest {
         assertFalse(cell.isAlive(), "The new cell should be dead.");
     }
 
+    @Test
+    @DisplayName("The cell can be set either dead or alive")
+    void setAliveTest(){
+        cell.setAlive(true);
+        assertTrue(cell.isAlive(), "The cell should be alive after setting alive to true.");
+        cell.setAlive(false);
+        assertFalse(cell.isAlive(), "The cell should be dead after setting alive to false.");
+    }
+
 }
