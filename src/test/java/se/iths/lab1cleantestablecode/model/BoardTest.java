@@ -21,5 +21,7 @@ public class BoardTest {
         board.getBoarOfCells()[4][2].setAlive(true);
         board.getBoarOfCells()[4][3].setAlive(true);
         board.getBoarOfCells()[4][4].setAlive(true);
+
+        board.newGeneration();
     }
 }

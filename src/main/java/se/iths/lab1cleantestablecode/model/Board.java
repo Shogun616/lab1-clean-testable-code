@@ -30,4 +30,24 @@ public class Board {
             }
         }
     }
+
+    public void newGeneration() {
+        for (int y = 0; y < numberOfRows; y++){
+            for (int x = 0; x < numberOfColumns; x++){
+                countNeighboursForCell(x, y);
+            }
+        }
+        for (int y = 0; y < numberOfRows; y++){
+            for (int x = 0; x < numberOfColumns; x++){
+                Cell actualCell = boardOfCells[y][x];
+
+                if(!actualCell.isAlive() || (actualCell.getNeighbours() != 2 && actualCell.getNeighbours() != 3)){
+                    actualCell.setAlive(!actualCell.isAlive() && actualCell.getNeighbours() == 3);
+                }
+            }
+        }
+    }
+
+    private void countNeighboursForCell(int x, int y) {
+    }
 }
