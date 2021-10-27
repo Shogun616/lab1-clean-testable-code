@@ -30,4 +30,10 @@ public class CellTest {
         assertFalse(cell.isAlive(), "The cell should be dead after setting alive to false.");
     }
 
+    @Test
+    @DisplayName("The new cell has no neighbours.")
+    void getNeighboursTest(){
+        assertEquals(0, cell.getNeighbours());
+    }
+
 }

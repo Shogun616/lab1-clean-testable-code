@@ -3,6 +3,7 @@ package se.iths.lab1cleantestablecode.model;
 public class Cell {
 
     private boolean isAlive = false;
+    private int neighbours = 0;
 
     public boolean isAlive() {
         return isAlive;
@@ -10,5 +11,13 @@ public class Cell {
 
     public void setAlive(boolean alive){
         isAlive = alive;
+    }
+
+    public int getNeighbours() {
+        return neighbours;
+    }
+
+    public void setNeighbours(int neighbours) {
+        this.neighbours = neighbours;
     }
 }
