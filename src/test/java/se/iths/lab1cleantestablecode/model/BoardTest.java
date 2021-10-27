@@ -6,4 +6,10 @@ import org.junit.jupiter.api.Test;
 
 public class BoardTest {
 
+    private Board board;
+
+    @BeforeEach
+    void init(){
+        board = new Board();
+    }
 }
