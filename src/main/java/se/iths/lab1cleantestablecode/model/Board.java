@@ -49,5 +49,19 @@ public class Board {
     }
 
     private void countNeighboursForCell(int x, int y) {
+        Cell actualCell = boardOfCells[y][x];
+        int neighbours = 0;
+
+        for (int i = -1; i <= 1; i++){
+            for (int j = -1; j <= 1; j++){
+                if (y + i >= 0 && y + i < numberOfRows && x + j >= 0 && x +j < numberOfColumns){
+                    Cell neighboursCell = boardOfCells[y + i][x + j];
+                    if (neighboursCell.isAlive() && neighboursCell != actualCell){
+                        neighbours++;
+                    }
+                }
+            }
+        }
+        actualCell.setNeighbours(neighbours);
     }
 }
