@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>se.iths.lab1cleantestablecode/se.iths.lab1cleantestablecode.HelloApplication
+                            <mainClass>se.iths.lab1cleantestablecode/se.iths.lab1cleantestablecode.Main
                             </mainClass>
                         </configuration>
                     </execution>
