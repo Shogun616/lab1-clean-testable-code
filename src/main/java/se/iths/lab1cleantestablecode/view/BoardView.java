@@ -17,6 +17,8 @@ public class BoardView {
         this.numberOfRows = numberOfRows;
         this.numberOfColumns = numberOfColumns;
         cellViewArray = new CellView[numberOfRows][numberOfColumns];
+        setUpGrid();
+        displayBoardInGridPane();
     }
 
     public CellView[][] getCellViewArray() {

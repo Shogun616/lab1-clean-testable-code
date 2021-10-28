@@ -15,7 +15,7 @@ public class GameLoop {
     private ScheduledExecutorService service;
 
     public GameLoop(BoardController controller){
-        this.controller = BoardController;
+        this.controller = controller;
     }
 
     public void handleStartBtn(Button startBtn){
