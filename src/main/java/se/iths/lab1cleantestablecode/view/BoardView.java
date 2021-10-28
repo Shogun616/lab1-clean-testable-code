@@ -11,7 +11,7 @@ public class BoardView {
     private final CellView[][] cellViewArray;
     private final int numberOfRows;
     private final int numberOfColumns;
-    private GridPane gridPane = new GridPane();
+    private final GridPane gridPane = new GridPane();
 
     public BoardView(int numberOfRows, int numberOfColumns) {
         this.numberOfRows = numberOfRows;
