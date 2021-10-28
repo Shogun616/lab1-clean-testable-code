@@ -23,8 +23,6 @@ public class BoardView {
         return cellViewArray;
     }
 
-    public void upDateBoardView(Cell[][] boarOfCells) {
-    }
 
     private void setUpGrid(){
         gridPane.setStyle("-fx-background-color: grey");
@@ -36,6 +34,24 @@ public class BoardView {
     }
 
     private void displayBoardInGridPane(){
+        for (int y = 0; y < numberOfColumns; y++){
+            for (int x = 0; x < numberOfRows; x++){
+                CellView cellView = new CellView();
+                cellViewArray[y][x] = cellView;
+                gridPane.add(cellView.getCellGraphicRepresentation(), x, y);
+            }
+        }
+    }
 
+    public void upDateBoardView(Cell[][] boarOfCells) {
+        for (int y = 0; y < numberOfColumns; y++){
+            for (int x = 0; x < numberOfRows; x++){
+                if(boarOfCells[y][x].isAlive()){
+                    cellViewArray[y][x].makeCellAlive();
+                } else {
+                    cellViewArray[y][x].makeCellDead();
+                }
+            }
+        }
     }
 }
