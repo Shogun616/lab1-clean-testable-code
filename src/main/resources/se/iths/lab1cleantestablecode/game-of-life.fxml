@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="se.iths.lab1cleantestablecode.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane fx:id="MainStage" prefHeight="600.0" prefWidth="600.0" xmlns:fx="http://javafx.com/javafx/8.0.121"
+            xmlns="http://javafx.com/fxml" fx:controller="se.iths.lab1cleantestablecode.controller.GameController">
+    <bottom>
+        <Pane prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #d9d9d9;" BorderPane.alignment="CENTER">
+            <Button fx:id="startBtn" layoutX="16.0" layoutY="10.0" minWidth="61.0" mnemonicParsing="false"
+                    onAction="#handleStartBtn" prefWidth="61.0" text="Start"/>
+            <Label layoutX="77.0" layoutY="14.0" text="Speed:">
+                <padding>
+                    <Insets left="30.0"/>
+                </padding>
+            </Label>
+            <Slider fx:id="speedSlider" blockIncrement="1.0" layoutX="155.0" layoutY="11.0" majorTickUnit="1.0"
+                    max="20.0" min="1.0" minorTickCount="0" showTickMarks="true" value="10.0"/>
+            <Button fx:id="clearBtn" alignment="CENTER_RIGHT" layoutX="450.0" layoutY="10.0" minWidth="61.0"
+                    mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleClearBtn" prefWidth="61.0"
+                    text="CLEAR" wrapText="true">
+                <cursor>
+                    <Cursor fx:constant="DEFAULT"/>
+                </cursor>
+            </Button>
+            <Button fx:id="quitBtn" layoutX="525.0" layoutY="10.0" minWidth="61.0" mnemonicParsing="false"
+                    onAction="#handleQuitBtn" prefWidth="61.0" text="Quit"/>
+        </Pane>
+    </bottom>
+</BorderPane>
