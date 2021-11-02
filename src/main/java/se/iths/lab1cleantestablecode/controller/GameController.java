@@ -18,6 +18,7 @@ public class GameController implements Initializable {
     public Button startBtn;
     public Button clearBtn;
     public Button quitBtn;
+    public Button gosperGliderGunBtn;
 
     private BoardController controller;
     private GameLoop loop;

@@ -6,4 +6,6 @@ module se.iths.lab1cleantestablecode {
     exports se.iths.lab1cleantestablecode;
     opens se.iths.lab1cleantestablecode.model;
     exports se.iths.lab1cleantestablecode.model;
+    opens se.iths.lab1cleantestablecode.controller;
+    exports se.iths.lab1cleantestablecode.controller to javafx.fxml;
 }
