@@ -33,4 +33,16 @@
                     onAction="#handleQuitBtn" prefWidth="61.0" text="Quit"/>
         </Pane>
     </bottom>
+    <top>
+        <Pane prefHeight="31.0" prefWidth="600.0" style="-fx-background-color: #d9d9d9;" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="gosperGliderGunBtn" layoutX="21.0" layoutY="4.0" mnemonicParsing="false"
+                onAction="#handleGosperGliderGunBtn" text="Gosper Glider Gun">
+                    <font>
+                        <Font size="11.0"/>
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </top>
 </BorderPane>
