@@ -35,4 +35,14 @@ public class BoardTest {
         assertTrue(board.getBoarOfCells()[5][3].isAlive());
         assertTrue(board.getBoarOfCells()[3][2].isAlive());
     }
+
+    @Test
+    @DisplayName("Check the next generation of gliders has no neighbours.")
+    void oneCell(){
+        board.getBoarOfCells()[2][3].setAlive(true);
+
+        board.newGeneration();
+
+        assertFalse(board.getBoarOfCells()[2][3].isAlive());
+    }
 }
