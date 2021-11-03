@@ -1,0 +1,9 @@
+se\iths\lab1cleantestablecode\Main.class
+module-info.class
+se\iths\lab1cleantestablecode\controller\BoardController.class
+se\iths\lab1cleantestablecode\controller\GameController.class
+se\iths\lab1cleantestablecode\view\CellView.class
+se\iths\lab1cleantestablecode\controller\GameLoop.class
+se\iths\lab1cleantestablecode\model\Cell.class
+se\iths\lab1cleantestablecode\view\BoardView.class
+se\iths\lab1cleantestablecode\model\Board.class
