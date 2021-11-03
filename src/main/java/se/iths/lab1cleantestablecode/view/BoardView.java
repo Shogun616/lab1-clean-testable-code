@@ -44,10 +44,10 @@ public class BoardView {
         }
     }
 
-    public void updateBoardView(Cell[][] boarOfCells) {
+    public void updateBoardView(Cell[][] boardOfCells) {
         for (int y = 0; y < numberOfColumns; y++){
             for (int x = 0; x < numberOfRows; x++){
-                if(boarOfCells[y][x].isAlive()){
+                if(boardOfCells[y][x].isAlive()){
                     cellViewArray[y][x].makeCellAlive();
                 } else {
                     cellViewArray[y][x].makeCellDead();

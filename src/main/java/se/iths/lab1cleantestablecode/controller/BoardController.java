@@ -17,17 +17,17 @@ public class BoardController {
 
     public void newGeneration(){
         board.newGeneration();
-        view.updateBoardView(board.getBoarOfCells());
+        view.updateBoardView(board.getBoardOfCells());
     }
 
     public void clearBoard(){
         this.board = new Board();
-        view.updateBoardView(board.getBoarOfCells());
+        view.updateBoardView(board.getBoardOfCells());
     }
 
     public void createGosperGliderGun(){
         board.CreateGosperGliderGun();
-        view.updateBoardView(board.getBoarOfCells());
+        view.updateBoardView(board.getBoardOfCells());
     }
 
     public void setUpOnMouseEvents(){
@@ -42,11 +42,11 @@ public class BoardController {
     }
 
     private void handleClickedCell(int x, int y){
-        if(board.getBoarOfCells()[y][x].isAlive()){
-            board.getBoarOfCells()[y][x].setAlive(false);
+        if(board.getBoardOfCells()[y][x].isAlive()){
+            board.getBoardOfCells()[y][x].setAlive(false);
             view.getCellViewArray()[y][x].makeCellDead();
         } else {
-            board.getBoarOfCells()[y][x].setAlive(true);
+            board.getBoardOfCells()[y][x].setAlive(true);
             view.getCellViewArray()[y][x].makeCellAlive();
         }
     }
