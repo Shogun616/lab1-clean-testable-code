@@ -48,7 +48,7 @@ public class Board {
         }
     }
 
-    private void countNeighboursForCell(int x, int y) {
+    public void countNeighboursForCell(int x, int y) {
         Cell actualCell = boardOfCells[y][x];
         int neighbours = 0;
 

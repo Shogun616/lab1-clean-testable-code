@@ -86,9 +86,15 @@ public class BoardTest {
     }
 
     @Test
-    @DisplayName("Check neighbour.")
-    void neighbourTest(){
+    @DisplayName("Check neighbour position.")
+    void countNeighbourTest(){
+        board.getBoardOfCells()[1][2].setAlive(true);
 
+        board.newGeneration();
+
+        board.countNeighboursForCell(1, 2);
+
+        assertFalse(board.getBoardOfCells()[1][2].isAlive());
     }
 
 }
