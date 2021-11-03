@@ -1,0 +1,4 @@
+--patch-module
+se.iths.lab1cleantestablecode=_
+--add-reads
+se.iths.lab1cleantestablecode=ALL-UNNAMED
