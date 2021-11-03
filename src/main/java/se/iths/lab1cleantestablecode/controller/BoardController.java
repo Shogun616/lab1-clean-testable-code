@@ -17,17 +17,17 @@ public class BoardController {
 
     public void newGeneration(){
         board.newGeneration();
-        view.upDateBoardView(board.getBoarOfCells());
+        view.updateBoardView(board.getBoarOfCells());
     }
 
     public void clearBoard(){
         this.board = new Board();
-        view.upDateBoardView(board.getBoarOfCells());
+        view.updateBoardView(board.getBoarOfCells());
     }
 
     public void createGosperGliderGun(){
         board.CreateGosperGliderGun();
-        view.upDateBoardView(board.getBoarOfCells());
+        view.updateBoardView(board.getBoarOfCells());
     }
 
     public void setUpOnMouseEvents(){

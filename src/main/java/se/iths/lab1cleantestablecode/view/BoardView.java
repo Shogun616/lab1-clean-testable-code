@@ -25,7 +25,6 @@ public class BoardView {
         return cellViewArray;
     }
 
-
     private void setUpGrid(){
         gridPane.setStyle("-fx-background-color: grey");
         gridPane.setHgap(1);
@@ -45,7 +44,7 @@ public class BoardView {
         }
     }
 
-    public void upDateBoardView(Cell[][] boarOfCells) {
+    public void updateBoardView(Cell[][] boarOfCells) {
         for (int y = 0; y < numberOfColumns; y++){
             for (int x = 0; x < numberOfRows; x++){
                 if(boarOfCells[y][x].isAlive()){

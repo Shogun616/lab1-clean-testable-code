@@ -23,7 +23,6 @@ public class GameController implements Initializable {
     private BoardController controller;
     private GameLoop loop;
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         StaticMainStage = this.MainStage;
