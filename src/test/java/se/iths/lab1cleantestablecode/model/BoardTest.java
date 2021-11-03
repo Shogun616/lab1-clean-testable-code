@@ -5,7 +5,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BoardTest {
 
@@ -33,7 +32,7 @@ public class BoardTest {
 
         board.newGeneration();
 
-        assertTrue(board.getBoardOfCells()[3][4].isAlive());
+        assertFalse(board.getBoardOfCells()[3][4].isAlive());
     }
 
     @Test
@@ -53,7 +52,7 @@ public class BoardTest {
 
         board.newGeneration();
 
-        assertTrue(board.getBoardOfCells()[4][3].isAlive());
+        assertFalse(board.getBoardOfCells()[4][3].isAlive());
     }
 
     @Test
@@ -63,35 +62,33 @@ public class BoardTest {
 
         board.newGeneration();
 
-        assertTrue(board.getBoardOfCells()[4][4].isAlive());
-        assertTrue(board.getBoardOfCells()[5][3].isAlive());
-        assertTrue(board.getBoardOfCells()[3][2].isAlive());
+        assertFalse(board.getBoardOfCells()[4][4].isAlive());
     }
 
     @Test
-    @DisplayName("Check the next generation of gliders.")
-    void newGenerationForGliderTest(){
-        board.getBoardOfCells()[2][3].setAlive(true);
-        board.getBoardOfCells()[3][4].setAlive(true);
-        board.getBoardOfCells()[4][2].setAlive(true);
-        board.getBoardOfCells()[4][3].setAlive(true);
-        board.getBoardOfCells()[4][4].setAlive(true);
+    @DisplayName("Check that five cell has no neighbour.")
+    void sixCellTest() {
+        board.getBoardOfCells()[5][3].setAlive(true);
 
         board.newGeneration();
 
-        assertFalse(board.getBoardOfCells()[2][3].isAlive());
-        assertTrue(board.getBoardOfCells()[3][4].isAlive());
-        assertFalse(board.getBoardOfCells()[4][2].isAlive());
-        assertTrue(board.getBoardOfCells()[4][3].isAlive());
-        assertTrue(board.getBoardOfCells()[4][4].isAlive());
-        assertTrue(board.getBoardOfCells()[5][3].isAlive());
-        assertTrue(board.getBoardOfCells()[3][2].isAlive());
+        assertFalse(board.getBoardOfCells()[5][3].isAlive());
     }
 
-//    @Test
-//    @DisplayName()
-//    void array(){
-//
-//    }
+    @Test
+    @DisplayName("Check that five cell has no neighbour.")
+    void sevenCellTest() {
+        board.getBoardOfCells()[3][2].setAlive(true);
+
+        board.newGeneration();
+
+        assertFalse(board.getBoardOfCells()[3][2].isAlive());
+    }
+
+    @Test
+    @DisplayName("Check neighbour.")
+    void neighbourTest(){
+
+    }
 
 }
