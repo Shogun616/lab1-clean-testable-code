@@ -29,5 +29,6 @@ public class BoardTest {
     @DisplayName("Count the neighbouring cell.")
     void countNeighbourTest(){
 
+        board.countNeighboursForCell(1, 2);
     }
 }

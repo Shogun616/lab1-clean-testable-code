@@ -16,4 +16,7 @@ public class Board {
             }
         }
     }
+
+    public void countNeighboursForCell(int i, int i1) {
+    }
 }
