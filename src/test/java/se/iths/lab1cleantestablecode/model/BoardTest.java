@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BoardTest {
 
@@ -42,5 +42,12 @@ public class BoardTest {
     void countNeighbourTest(){
 
         board.countNeighboursForCell(1, 2);
+        board.countNeighboursForCell(2, 3);
+        board.countNeighboursForCell(3, 4);
+        board.countNeighboursForCell(4, 2);
+        board.countNeighboursForCell(4, 3);
+
+        assertFalse(board.getBoardOfCells()[1][2].isAlive());
+
     }
 }
