@@ -24,4 +24,10 @@ public class BoardTest {
 
         assertFalse(board.getBoardOfCells()[2][3].isAlive());
     }
+
+    @Test
+    @DisplayName("Count the neighbouring cell.")
+    void countNeighbourTest(){
+
+    }
 }
