@@ -109,8 +109,10 @@ public class BoardTest {
     @Test
     @DisplayName("Count the neighbouring cell.")
     void countNeighbourTest(){
+
         board.countNeighboursForCell(1, 2);
-        board.countNeighboursForCell(2, 3);
+
+        board.newGeneration();
 
         assertFalse(board.getBoardOfCells()[1][2].isAlive());
     }
