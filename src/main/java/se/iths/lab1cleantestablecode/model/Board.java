@@ -2,9 +2,14 @@ package se.iths.lab1cleantestablecode.model;
 
 public class Board {
 
-    private Cell[][] boardOfCells;
-    private int numberOfRows;
-    private int numberOfColumns;
+    private final Cell[][] boardOfCells;
+    private final int numberOfRows = 45;
+    private final int numberOfColumns = 45;
+
+    public Board() {
+        boardOfCells = new Cell[numberOfRows][numberOfColumns];
+        fillBoardWithCells();
+    }
 
     public Cell[][] getBoardOfCells() {
         return boardOfCells;
