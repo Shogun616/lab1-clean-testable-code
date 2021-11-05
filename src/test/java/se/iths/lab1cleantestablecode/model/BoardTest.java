@@ -33,7 +33,6 @@ public class BoardTest {
 
         board.newGeneration();
 
-        assertFalse(board.getBoardOfCells()[2][3].isAlive());
         assertFalse(board.getBoardOfCells()[3][4].isAlive());
     }
 
@@ -46,8 +45,6 @@ public class BoardTest {
 
         board.newGeneration();
 
-        assertFalse(board.getBoardOfCells()[2][3].isAlive());
-        assertFalse(board.getBoardOfCells()[3][4].isAlive());
         assertFalse(board.getBoardOfCells()[4][2].isAlive());
     }
 
@@ -61,9 +58,6 @@ public class BoardTest {
 
         board.newGeneration();
 
-        assertFalse(board.getBoardOfCells()[2][3].isAlive());
-        assertTrue(board.getBoardOfCells()[3][4].isAlive());
-        assertFalse(board.getBoardOfCells()[4][2].isAlive());
         assertTrue(board.getBoardOfCells()[4][3].isAlive());
     }
 
@@ -78,10 +72,6 @@ public class BoardTest {
 
         board.newGeneration();
 
-        assertFalse(board.getBoardOfCells()[2][3].isAlive());
-        assertTrue(board.getBoardOfCells()[3][4].isAlive());
-        assertFalse(board.getBoardOfCells()[4][2].isAlive());
-        assertTrue(board.getBoardOfCells()[4][3].isAlive());
         assertTrue(board.getBoardOfCells()[4][4].isAlive());
     }
 
@@ -97,13 +87,7 @@ public class BoardTest {
 
         board.newGeneration();
 
-        assertFalse(board.getBoardOfCells()[2][3].isAlive());
-        assertTrue(board.getBoardOfCells()[3][4].isAlive());
-        assertTrue(board.getBoardOfCells()[4][2].isAlive());
-        assertFalse(board.getBoardOfCells()[4][3].isAlive());
-        assertTrue(board.getBoardOfCells()[4][4].isAlive());
         assertTrue(board.getBoardOfCells()[5][3].isAlive());
-        assertTrue(board.getBoardOfCells()[3][2].isAlive());
     }
 
     @Test
@@ -119,12 +103,6 @@ public class BoardTest {
 
         board.newGeneration();
 
-        assertTrue(board.getBoardOfCells()[2][3].isAlive());
-        assertTrue(board.getBoardOfCells()[3][4].isAlive());
-        assertTrue(board.getBoardOfCells()[4][2].isAlive());
-        assertFalse(board.getBoardOfCells()[4][3].isAlive());
-        assertTrue(board.getBoardOfCells()[4][4].isAlive());
-        assertTrue(board.getBoardOfCells()[5][3].isAlive());
         assertTrue(board.getBoardOfCells()[3][2].isAlive());
     }
 
