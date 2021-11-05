@@ -26,6 +26,18 @@ public class BoardTest {
     }
 
     @Test
+    @DisplayName("Check the second generation of glider.")
+    void twoCellTest() {
+        board.getBoardOfCells()[2][3].setAlive(true);
+        board.getBoardOfCells()[3][4].setAlive(true);
+
+        board.newGeneration();
+
+        assertFalse(board.getBoardOfCells()[2][3].isAlive());
+        assertFalse(board.getBoardOfCells()[3][4].isAlive());
+    }
+
+    @Test
     @DisplayName("Count the neighbouring cell.")
     void countNeighbourTest(){
 
