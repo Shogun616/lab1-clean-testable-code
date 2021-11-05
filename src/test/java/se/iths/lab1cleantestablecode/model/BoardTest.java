@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 public class BoardTest {
 
     private Board board;
@@ -17,5 +19,9 @@ public class BoardTest {
     @DisplayName("Check the first generation of glider.")
     void oneCellTest(){
         board.getBoardOfCells()[2][3].setAlive(true);
+
+        board.newGeneration();
+
+        assertFalse(board.getBoardOfCells()[2][3].isAlive());
     }
 }
