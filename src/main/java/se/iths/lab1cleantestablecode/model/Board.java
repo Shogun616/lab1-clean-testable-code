@@ -18,6 +18,14 @@ public class Board {
         return numberOfColumns;
     }
 
+    private void fillBoardWithCells() {
+        for (int y = 0; y < numberOfRows; y++){
+            for (int x = 0; x < numberOfColumns; x++){
+                boardOfCells[y][x] = new Cell();
+            }
+        }
+    }
+
     public void newGeneration() {
         for (int y = 0; y < numberOfRows; y++){
             for (int x =0; x < numberOfColumns; x++){
